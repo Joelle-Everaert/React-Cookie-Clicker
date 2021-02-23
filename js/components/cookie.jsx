@@ -6,6 +6,8 @@ export class Cookie extends React.Component{
     constructor(props){
         super(props);
         this.state = { 
+            level1: 10,
+            level2: 20,
             puissanceClick: 1,
             clicks : 0
         };
@@ -19,15 +21,17 @@ export class Cookie extends React.Component{
 
     level1 = () => {
         this.setState({
-            clicks: this.state.puissanceClick += 2,
-            clicks: this.state.clicks -= 10
+            clicks: this.state.clicks -= this.state.level1,
+            puissanceClick: this.state.puissanceClick += 2,
+            level1: this.state.level1 += 20
         })
     }
 
     level2= () => {
         this.setState({
-            clicks: this.state.puissanceClick += 10,
-            clicks: this.state.clicks -=30
+            clicks: this.state.clicks -= this.state.level2,
+            puissanceClick: this.state.puissanceClick += 10,
+            level2: this.state.level2 += 30
         })
     }
 
@@ -41,13 +45,17 @@ export class Cookie extends React.Component{
         return (
             <div className="display">
                 <div className="shop">SHOP
-                {this.state.clicks > 10 ?
-                    <div onClick={this.level1}>+ 2 cookies</div>
+                {this.state.clicks >= this.state.level1 ?
+                <div>
+                    <button onClick={this.level1}>+ 2 cookies</button>
+                </div>
                     :
                     <p></p>
                 }
-                {this.state.clicks > 100 ?
-                    <div onClick={this.level2}>+ 10 cookies</div>
+                {this.state.clicks >= this.state.level2 ?
+                <div>
+                    <button onClick={this.level2}>+ 10 cookies</button>
+                </div>
                     :
                     <p></p>
                 }
