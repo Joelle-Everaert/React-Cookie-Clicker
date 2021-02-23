@@ -3,15 +3,15 @@ import React from 'react'
 
 
 import { NavBar } from './components/navbar.jsx'
-import { Cookies } from './components/cookies.jsx'
+import { Display } from './components/display.jsx'
+import Cookie from './components/cookie.jsx'
 
 
 function Application(){
     return(
     <div>
         <NavBar />
-        <h1> Bonjour </h1>
-        <Cookies />
+        <Display> <Cookie /> </Display>
     </div>
     )
 }
