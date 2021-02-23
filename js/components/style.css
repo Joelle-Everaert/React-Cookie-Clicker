@@ -1,7 +1,23 @@
 .navBar{
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 25px;
     background-color: black;
     color: white;
+}
+
+.cookie{
+
+    text-align: center;
+    border-radius:50%;
+    width: 200px;
+    height:200px;
+    background-image: url("img/cookie.png");
+    background-size:cover;
+    outline: none;
+
+}
+
+.imgcookies{
+    text-align: center;
 }
