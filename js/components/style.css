@@ -42,17 +42,12 @@ body{
     padding: 5px;
 }
 
-.divCookie{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-}
+
 
 .totalCookies{
     display: flex;
     flex-direction: column;
-    text-align: center;
+    justify-content: center;
 }
 
 .displayCookie{
