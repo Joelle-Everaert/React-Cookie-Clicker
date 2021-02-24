@@ -67,7 +67,7 @@ body{
     border-radius: 40%;
 }
 
-#level1{
+.level1{
     background-image: url("img/level1.jpg");
     background-position: center;
 }
@@ -78,12 +78,12 @@ body{
 }
 
 
-#level2{
+.level2{
     background-image: url("img/level2.jpg");
 }
 
 
-#level3{
+.level3{
     background-image: url("img/level3.jpg");
 }
 

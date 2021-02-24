@@ -5,9 +5,15 @@ export class Cookie extends React.Component{
     constructor(props){
         super(props);
         this.state = { 
+    levels :
+    [
+        {name:"level1", price:10, func:this.level1, class:"level level1"},
+        {name:"level2", price:20, func:this.level2, class:"level level2"},
+        {name:"level3", price:500, func:this.level3, class:"level level3"}
+    ],
             level1: 10,
             level2: 20,
-            level3: 700,
+            level3: 500,
             puissanceGrandMa: 10,
             valeurClick: 1,
             clicks : 0
@@ -56,34 +62,44 @@ export class Cookie extends React.Component{
     }
 
     render(){
+
+        const listCookieLevel = this.state.levels.map((level)=>(
+            <AddCookie 
+                upgrade={level.func} 
+                clicker={this.state.clicks}
+                level={level.price}
+                class={level.class}
+            />
+        ))
         return (
             <div className="display">
                 <div className="shop">SHOP
                 <div className="box">
 
                 <div>
-                    <AddCookie 
-                    upgrade={this.level1} 
-                    price={this.state.level1}
+                    {listCookieLevel}
+                    {/* <AddCookie 
+                    upgrade={this.level1}
                     clicker={this.state.clicks}
                     level={this.state.level1}
-                    />
+                    class={this.state.level.class}
+                    /> */}
                 </div>
                    
-                {this.state.clicks >= this.state.level2 ?
+                {/* {this.state.clicks >= this.state.level2 ?
                 <div>
-                    <div className="level" id="level2" onClick={this.level2}></div><div className="price">{this.state.level2} cookies </div>
+                    <div className="level level2" onClick={this.level2}></div><div className="price">{this.state.level2} cookies </div>
                 </div>
                     :
                     <p></p>
                 }
                 {this.state.clicks >= this.state.level3 ?
                 <div>
-                    <div className="level" id="level3" onClick={this.level3}></div><div className="price">{this.state.level3} cookies </div>
+                    <div className="level level3" onClick={this.level3}></div><div className="price">{this.state.level3} cookies </div>
                 </div>
                     :
                     <p></p>
-                }
+                } */}
                 </div>
             </div>
 
