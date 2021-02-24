@@ -8,21 +8,23 @@ export class Cookie extends React.Component{
         this.state = { 
             level1: 10,
             level2: 20,
-            puissanceClick: 1,
+            grandMaLevel: 700,
+            puissanceGrandMa: 10,
+            valeurClick: 1,
             clicks : 0
         };
     }
 
     clicked = () => {
         this.setState({
-            clicks: this.state.clicks + this.state.puissanceClick
+            clicks: this.state.clicks + this.state.valeurClick
         })
     }
 
     level1 = () => {
         this.setState({
             clicks: this.state.clicks -= this.state.level1,
-            puissanceClick: this.state.puissanceClick += 2,
+            valeurClick: this.state.valeurClick += 2,
             level1: this.state.level1 += 20
         })
     }
@@ -30,16 +32,29 @@ export class Cookie extends React.Component{
     level2= () => {
         this.setState({
             clicks: this.state.clicks -= this.state.level2,
-            puissanceClick: this.state.puissanceClick += 10,
+            valeurClick: this.state.valeurClick += 10,
             level2: this.state.level2 += 30
         })
     }
 
-    // grandMaLevel =() =>
-    // this.setState({
-    // INTERVAL 
-    // })
+    grandMaLevel =() => {
+        this.setState({
+            clicks: this.state.clicks -= this.state.grandMaLevel,
+            // puissanceGrandMa: this.state.puissanceGrandMa += 10,
+            grandMaLevel: this.state.grandMaLevel += 2000,
 
+        })
+
+        clearInterval(intervalGrandMa)
+
+        const intervalGrandMa = setInterval(() => {
+            this.setState({
+                clicks: this.state.clicks += this.state.puissanceGrandMa,
+            })
+        }, 1000);
+
+       
+    }
 
     render(){
         return (
@@ -47,19 +62,26 @@ export class Cookie extends React.Component{
                 <div className="shop">SHOP
                 {this.state.clicks >= this.state.level1 ?
                 <div>
-                    <button onClick={this.level1}>+ 2 cookies</button>
+                    <div className="imgLevel1" onClick={this.level1}><p className="level1">{this.state.level1} cookies </p> </div>
                 </div>
                     :
                     <p></p>
                 }
                 {this.state.clicks >= this.state.level2 ?
                 <div>
-                    <button onClick={this.level2}>+ 10 cookies</button>
+                    <div className="imgLevel2" onClick={this.level2}><p className="level2">{this.state.level2} cookies </p></div>
                 </div>
                     :
                     <p></p>
                 }
+                {this.state.clicks >= this.state.grandMaLevel ?
+                <div>
+                    <div className="imgLevel3" onClick={this.grandMaLevel}><p className="level3">{this.state.grandMaLevel} cookies </p></div>
                 </div>
+                    :
+                    <p></p>
+                }
+            </div>
 
             <div className="totalCookies">
             <button onClick={this.clicked} className="cookie"><strong>Click on me</strong></button>
