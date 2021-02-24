@@ -1,4 +1,5 @@
 import React from 'react'
+import AddCookie from './addCookie'
 
 export class Cookie extends React.Component{
     constructor(props){
