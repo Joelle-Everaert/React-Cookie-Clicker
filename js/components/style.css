@@ -29,7 +29,7 @@ body{
     justify-content: space-between;
     width: 80%;
     margin: 25px auto;
-    height: 500px;
+    height: auto;
     border: solid black 1px;
 }
 
@@ -59,40 +59,48 @@ body{
     padding: 5px;
 }
 
-.imgLevel1{
+.level{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 40%;
+}
+
+#level1{
     background-image: url("img/level1.jpg");
-    width: 100px;
-    height: 100px;
-    background-size: cover;
+    background-position: center;
 }
 
-.level1{
-    color:black;
-    position: absolute;
+.price{
+    text-align: center;
+    margin: 20px 0;
 }
 
-.imgLevel2{
-    padding: 5px;
+
+#level2{
     background-image: url("img/level2.jpg");
-    width: 100px;
-    height: 100px;
-    background-size: cover;
 }
 
-.level2{
-    color:black;
-    position: absolute;
-}
 
-.imgLevel3{
-    padding: 5px;
+#level3{
     background-image: url("img/level3.jpg");
-    width: 100px;
-    height: 100px;
-    background-size: cover;
 }
 
-.level3{
-    color:black;
-    position: absolute;
+
+.box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin: 10px;
+    align-items: center;
 }
+
+/* .sizeLevel{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+} */
