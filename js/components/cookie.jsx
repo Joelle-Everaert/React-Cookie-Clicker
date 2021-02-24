@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 export class Cookie extends React.Component{
     constructor(props){
         super(props);
@@ -82,16 +80,16 @@ export class Cookie extends React.Component{
                     :
                     <p></p>
                 }
-            </div>
+                </div>
             </div>
 
             <div className="totalCookies">
             <button onClick={this.clicked} className="cookie"><strong>Click on me</strong></button>
             </div>
-            <div className="displayCookie"> Number of cookies : {this.state.clicks}
-            
+            <div className="displayCookie"> Number of cookies : <div> {this.state.clicks}</div>
             </div>
-            </div>
+
+        </div>
         )
     }
         
