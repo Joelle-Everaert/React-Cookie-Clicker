@@ -1,4 +1,5 @@
 import React from 'react'
+import AddCookie from './addCookie'
 
 export class Cookie extends React.Component{
     constructor(props){
@@ -8,7 +9,7 @@ export class Cookie extends React.Component{
             level2: 20,
             level3: 700,
             puissanceGrandMa: 10,
-            valeurClick: 1000,
+            valeurClick: 1,
             clicks : 0
         };
     }
@@ -59,13 +60,16 @@ export class Cookie extends React.Component{
             <div className="display">
                 <div className="shop">SHOP
                 <div className="box">
-                {this.state.clicks >= this.state.level1 ?
+
                 <div>
-                    <div className="level" id="level1" onClick={this.level1}></div> <div className="price">{this.state.level1} cookies </div>
+                    <AddCookie 
+                    upgrade={this.level1} 
+                    price={this.state.level1}
+                    clicker={this.state.clicks}
+                    level={this.state.level1}
+                    />
                 </div>
-                    :
-                    <p></p>
-                }
+                   
                 {this.state.clicks >= this.state.level2 ?
                 <div>
                     <div className="level" id="level2" onClick={this.level2}></div><div className="price">{this.state.level2} cookies </div>
