@@ -10,7 +10,7 @@ import { Cookie } from './components/cookie.jsx'
 
 function Application(){
     return(
-    <div>
+    <div className="page">
         <NavBar />
         <Cookie />
     </div>

@@ -2,6 +2,8 @@ body{
     font-family: sans-serif;
     padding: 0;
     margin: 0;
+    background: rgb(224,169,56);
+    background: radial-gradient(circle, rgba(224,169,56,0.8575805322128851) 0%, rgba(210,172,89,0.8267682072829132) 43%, rgba(171,179,178,1) 96%);
 }
 
 .navBar{
@@ -55,6 +57,18 @@ body{
     border-radius: 3%;
     margin: 10px;
     padding: 5px;
+}
+
+.number{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50%;
+    font-size: 35px;
+}
+
+.result{
+    font-size: 25px;
 }
 
 .level{
