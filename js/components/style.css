@@ -57,30 +57,6 @@ body{
     justify-content: center;
 }
 
-.displayCookie{
-    text-align: center;
-    width: 25%;
-    border:solid black 1px;
-    border-radius: 3%;
-    margin: 10px;
-    padding: 5px;
-}
-
-.number{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 50%;
-    font-size: 40px;
-}
-
-.result{
-    font-size:35px;
-    color: #9a0505;
-    
-    
-}
-
 .level{
     display: flex;
     justify-content: center;
@@ -123,4 +99,59 @@ body{
     width: 100%;
     margin: 10px;
     align-items: center;
+}
+
+.displayCookie{
+    text-align: center;
+    width: 25%;
+    border:solid black 1px;
+    border-radius: 3%;
+    margin: 10px;
+    padding: 5px;
+}
+
+.number{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 40px;
+}
+
+.result{
+    font-size:40px;
+    color: #9a0505;
+    background-color: cornsilk;
+    
+}
+
+.bonus{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin-top:20px;
+    align-items: center;
+}
+
+.bonusImg{
+    background-image: url("img/gifBonus.gif");
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    font-size: 25px;
+    color:cornsilk;
+    box-shadow: 0px 0px 15px 6px #a9a6a6;
+    border-radius: 10%;
+    margin-bottom: 15px;
+}
+
+.bonusImg2{
+    background-image: url("img/gifBonus2.gif");
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    font-size: 25px;
+    color:cornsilk;
+    box-shadow: 0px 0px 15px 6px #a9a6a6;
+    border-radius: 10%;
 }

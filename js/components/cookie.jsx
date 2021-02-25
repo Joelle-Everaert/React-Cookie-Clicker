@@ -1,5 +1,6 @@
 import React from 'react'
 import AddCookie from './addCookie'
+import Bonus from './bonus'
 
 export class Cookie extends React.Component{
     constructor(props){
@@ -8,11 +9,11 @@ export class Cookie extends React.Component{
     levels :
     [
         {id: 0, name:"level1", price:30, func:this.level1, class:"level level1", pc:2},
-        {id: 1, name:"level2", price:100, func:this.level2, class:"level level2", pc:10},
-        {id: 2, name:"level3", price:500, func:this.level3, class:"level level3", pc:30}
+        {id: 1, name:"level2", price:100, func:this.level2, class:"level level2", pc:15},
+        {id: 2, name:"level3", price:500, func:this.level3, class:"level level3", pc:20}
     ],
             valeurClick: 1,
-            clicks : 0,
+            clicks : 10000,
             pcPerSecond: 0,
             inflation : 1.15,
         };
@@ -92,6 +93,9 @@ export class Cookie extends React.Component{
             <button onClick={this.clicked} className="cookie"><strong>Click on me</strong></button>
             </div>
             <div className="displayCookie"> <p className="number">Number of cookies </p> <div className="result"> {this.state.clicks}</div>
+            <Bonus 
+            clicker={this.state.clicks}
+            />
             </div>
 
         </div>
