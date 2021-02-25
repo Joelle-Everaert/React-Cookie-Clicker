@@ -1,18 +1,33 @@
 import React from 'react'
 import AddCookie from './addCookie'
+import Bonus from './bonus'
+
 
 export class Cookie extends React.Component{
     constructor(props){
         super(props);
         this.state = { 
-            level1: 10,
-            level2: 20,
-            level3: 700,
-            puissanceGrandMa: 10,
-            valeurClick: 1000,
-            clicks : 0
+    levels :
+    [
+        {id: 0, name:"level1", price:30, func:this.level1, class:"level level1", pc:2},
+        {id: 1, name:"level2", price:100, func:this.level2, class:"level level2", pc:15},
+        {id: 2, name:"level3", price:500, func:this.level3, class:"level level3", pc:20}
+    ],
+            valeurClick: 1,
+            clicks : 10000,
+            pcPerSecond: 0,
+            inflation : 1.15,
         };
     }
+
+     //FONCTION POUR TOUT REGROUPER MAIS SANS SUCCES
+    //  upgrade = id => {
+    //     this.setState({
+    //         clicks: this.state.clicks -= this.state.levels[id].price,
+    //         valeurClick: this.state.valeurClick += this.state.levels[id].pc,
+    //         prixLevel : this.state.levels[id].price = Math.floor(this.state.levels[id].price * this.state.inflation),
+    //     })   
+    // }
 
     clicked = () => {
         this.setState({
@@ -22,72 +37,66 @@ export class Cookie extends React.Component{
 
     level1 = () => {
         this.setState({
-            clicks: this.state.clicks -= this.state.level1,
-            valeurClick: this.state.valeurClick += 2,
-            level1: this.state.level1 += 20
+            clicks: this.state.clicks -= this.state.levels[0].price,
+            valeurClick: this.state.valeurClick += this.state.levels[0].pc,
+            prixLevel: this.state.levels[0].price = Math.round(this.state.levels[0].price * this.state.inflation)
         })
     }
 
     level2= () => {
         this.setState({
-            clicks: this.state.clicks -= this.state.level2,
-            valeurClick: this.state.valeurClick += 10,
-            level2: this.state.level2 += 30
+            clicks: this.state.clicks -= this.state.levels[1].price,
+            valeurClick: this.state.valeurClick += this.state.levels[1].pc,
+            prixLevel: this.state.levels[1].price = Math.round(this.state.levels[1].price * this.state.inflation)
         })
     }
 
     level3 =() => {
         this.setState({
-            clicks: this.state.clicks -= this.state.level3,
-            // puissanceGrandMa: this.state.puissanceGrandMa += 10,
-            level3: this.state.level3 += 2000,
-
-        })
-
-        clearInterval(intervalLevel3)
-
-        const intervalLevel3 = setInterval(() => {
-            this.setState({
-                clicks: this.state.clicks += this.state.puissanceGrandMa,
-            })
-        }, 1000);
-
-       
+            clicks: this.state.clicks -= this.state.levels[2].price,
+            pcPerSecond: this.state.pcPerSecond += this.state.levels[2].pc,
+            prixLevel: this.state.levels[2].price = Math.round(this.state.levels[2].price * this.state.inflation)
+        })  
     }
+    
+    masterInterval = setInterval(() => {             
+    this.setState((state) => {
+        console.log("oups");
+         return {
+            clicks: this.state.clicks += this.state.pcPerSecond
+        };
+          });
+      }, 1000);
+
 
     render(){
+
+        const listCookieLevel = this.state.levels.map((level)=>(
+            <AddCookie 
+                upgrade={level.func} 
+                clicker={this.state.clicks}
+                level={level.price}
+                class={level.class}
+            />
+        ))
         return (
             <div className="display">
-                <div className="shop">SHOP
+                <div className="shop shoptitle">SHOP
+                {/* <div className="box"> */}
+
                 <div className="box">
-                {this.state.clicks >= this.state.level1 ?
-                <div>
-                    <div className="level" id="level1" onClick={this.level1}></div> <div className="price">{this.state.level1} cookies </div>
+                    {listCookieLevel}
                 </div>
-                    :
-                    <p></p>
-                }
-                {this.state.clicks >= this.state.level2 ?
-                <div>
-                    <div className="level" id="level2" onClick={this.level2}></div><div className="price">{this.state.level2} cookies </div>
-                </div>
-                    :
-                    <p></p>
-                }
-                {this.state.clicks >= this.state.level3 ?
-                <div>
-                    <div className="level" id="level3" onClick={this.level3}></div><div className="price">{this.state.level3} cookies </div>
-                </div>
-                    :
-                    <p></p>
-                }
-                </div>
+                {/* </div> */}
             </div>
 
             <div className="totalCookies">
             <button onClick={this.clicked} className="cookie"><strong>Click on me</strong></button>
             </div>
-            <div className="displayCookie"> Number of cookies : <div> {this.state.clicks}</div>
+            <div className="displayCookie"> <div className="number">Number of cookies </div> <div className="result"> {this.state.clicks}</div>
+            <Bonus 
+            clicker={this.state.clicks}
+            />
             </div>
 
         </div>
@@ -95,7 +104,3 @@ export class Cookie extends React.Component{
     }
         
 }
-
-// export default Cookie
-
-// onclick!!!
