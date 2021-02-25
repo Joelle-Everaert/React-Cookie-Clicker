@@ -3,15 +3,16 @@ import React from 'react'
 
 
 import { NavBar } from './components/navbar.jsx'
-import { Cookie } from './components/cookie.jsx'
+import Cookie  from './components/cookie.jsx'
 // import Cookie from './components/cookie.jsx' -> si dans cookie.jsx export default bas de page
-
+import { Footer } from './components/footer.jsx'
 
 function Application(){
     return(
-    <div className="page">
+    <div>
         <NavBar />
         <Cookie />
+        <Footer />
     </div>
     )
 }

@@ -7,8 +7,9 @@ class AddCookie extends Component{
             <div>
               {this.props.clicker >= this.props.level ?
                 <div>
-                    <div className={this.props.class} onClick={()=>this.props.upgrade()}></div>
+                    <div className={this.props.class} onClick={()=>this.props.upgrade(this.props.valeur)}></div>
                     <div className="price">{this.props.level} cookies </div>
+                    <div>{this.props.pc} </div>
                 </div>
                     :
                     <p></p>
