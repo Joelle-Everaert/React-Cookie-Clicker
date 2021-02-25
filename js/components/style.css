@@ -115,13 +115,14 @@ body{
     flex-direction: column;
     text-align: center;
     font-size: 40px;
+    margin-top:20px;
+    margin-bottom: 20px;
 }
 
 .result{
     font-size:40px;
     color: #9a0505;
     background-color: cornsilk;
-    
 }
 
 .bonus{
@@ -129,14 +130,14 @@ body{
     flex-direction: column;
     text-align: center;
     width: 100%;
-    margin-top:20px;
+    margin-top:25px;
     align-items: center;
 }
 
 .bonusImg{
     background-image: url("img/gifBonus.gif");
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     background-size: cover;
     font-size: 25px;
     color:cornsilk;
@@ -147,8 +148,8 @@ body{
 
 .bonusImg2{
     background-image: url("img/gifBonus2.gif");
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     background-size: cover;
     font-size: 25px;
     color:cornsilk;
