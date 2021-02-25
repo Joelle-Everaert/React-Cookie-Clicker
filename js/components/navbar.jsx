@@ -1,25 +1,12 @@
 import React from 'react'
+import img from './img/logoTest.jpg';
 
 export function NavBar(){
     return(
         <nav className="navBar">
             <div>React Cookies Cliker</div>
-            <img src="./img/logoTest.jpg" alt="logo" srcset=""/>
+            <a href =""> <img  id="logo" src={img} alt="logo" /></a> 
             <div>By Joelle Everaert</div>
         </nav>
     )
 }
-
-// import logo from './img/logoTest.jpg' 
-
-// export class NavBar extends Component { 
-//     render() { 
-//         return ( 
-//             <nav className="navBar">
-//             <div>React Cookies Cliker</div>
-//             <img src={logo} alt={"logo"}/> 
-//             <div>By Joelle Everaert</div>
-//         </nav>
-//         )  
-//     }
-// }

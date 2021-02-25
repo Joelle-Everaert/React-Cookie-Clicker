@@ -13,8 +13,16 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 25px;
+    justify-items: center;
     background-color: black;
     color: white;
+    align-items: center;
+    
+}
+
+#logo{
+    width: 50px;
+    border-radius: 50%;
 }
 
 .cookie{
@@ -134,10 +142,15 @@ body{
     align-items: center;
 }
 
+.titleBonus{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
 .bonusImg{
     background-image: url("img/gifBonus.gif");
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     background-size: cover;
     font-size: 25px;
     color:cornsilk;
@@ -148,8 +161,8 @@ body{
 
 .bonusImg2{
     background-image: url("img/gifBonus2.gif");
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     background-size: cover;
     font-size: 25px;
     color:cornsilk;
