@@ -100,6 +100,9 @@ class Cookie extends React.Component{
 
                 <div className="totalCookies">
                 <button onClick={this.clicked} className="cookie"><strong>Click on me</strong></button>
+               
+                {/* A CUSTO */}
+                
                 <p>Value of click : {this.state.valeurClick}</p>
                 </div>
                 <div className="displayCookie"> <div className="number">Number of cookies </div> <div className="result"> {this.state.clicks}</div>
