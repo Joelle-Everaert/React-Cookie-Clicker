@@ -30,7 +30,7 @@ body{
 
 footer{
     display: flex;
-    position: relative;
+    position: absolute;
     bottom: 0;
     padding: 10px;
     width: 100vw;
@@ -78,10 +78,9 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     width: 80%;
-    /* border: solid black 1px;
-    border-radius: 2%; */
-    
-    
+    height: 80vh;
+    border: solid black 1px;
+    /* border-radius: 2%; */
 }
 
 .shop{
@@ -94,6 +93,16 @@ footer{
     margin: 20px;
     padding: 15px;
     font-size: 30px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    align-items: center;
 }
 
 .totalCookies{
@@ -133,15 +142,6 @@ footer{
 
 .level3{
     background-image: url("img/level3.0.jpg");
-}
-
-.box{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    margin: 10px;
-    align-items: center;
 }
 
 .displayCookie{
