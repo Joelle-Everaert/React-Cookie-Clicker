@@ -1,9 +1,12 @@
 body{
-    font-family: sans-serif;
+    font-family: 'Akaya Telivigala', cursive;
+    color: #9A0506;
     padding: 0;
     margin: 0;
-    background: rgb(224,169,56);
-    background: radial-gradient(circle, rgba(224,169,56,0.8575805322128851) 0%, rgba(210,172,89,0.8267682072829132) 43%, rgba(171,179,178,1) 96%);
+    background-image: url("img//cookieBackground.png");
+    background-size: cover;
+    /* background: rgb(224,169,56);
+    background: radial-gradient(circle, rgba(224,169,56,0.8575805322128851) 0%, rgba(210,172,89,0.8267682072829132) 43%, rgba(171,179,178,1) 96%); */
 }
 
 .navBar{
@@ -16,23 +19,26 @@ body{
 
 .cookie{
     text-align: center;
+    padding-top:45%;
     border-radius:50%;
+    box-shadow: 0px 0px 15px 6px #a9a6a6;
     width: 200px;
     height: 200px;
-    background-image: url("img/cookie.png");
+    background-image: url("img/cookie2.png");
     background-size:cover;
     outline: none;
     color: rgb(218, 212, 34);
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .display{
     display: flex;
     justify-content: space-between;
     width: 80%;
-    margin: 25px auto;
+    margin: 0px auto;
     height: 600px;
     border: solid black 1px;
+    margin-top: 25px;
 }
 
 .shop{
@@ -40,8 +46,9 @@ body{
     width: 25%;
     border:solid black 1px;
     border-radius: 3%;
-    margin: 10px;
-    padding: 5px;
+    margin: 20px;
+    padding: 15px;
+    font-size: 30px;
 }
 
 .totalCookies{
@@ -64,11 +71,14 @@ body{
     flex-direction: column;
     text-align: center;
     margin-top: 50%;
-    font-size: 35px;
+    font-size: 40px;
 }
 
 .result{
-    font-size: 25px;
+    font-size:35px;
+    color: #9a0505;
+    
+    
 }
 
 .level{
@@ -79,26 +89,30 @@ body{
     height: 100px;
     background-size: cover;
     border-radius: 40%;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .level1{
-    background-image: url("img/level1.jpg");
+    background-image: url("img/level1.0.jpg");
     background-position: center;
 }
 
 .price{
     text-align: center;
-    margin: 20px 0;
+    margin-top: 3px;
+    background-color: cornsilk;
+    font-size: 15px;
 }
 
 
 .level2{
-    background-image: url("img/level2.jpg");
+    background-image: url("img/level2.0.jpg");
 }
 
 
 .level3{
-    background-image: url("img/level3.jpg");
+    background-image: url("img/level3.0.jpg");
 }
 
 

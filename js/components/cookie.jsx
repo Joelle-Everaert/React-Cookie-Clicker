@@ -37,7 +37,7 @@ export class Cookie extends React.Component{
         this.setState({
             clicks: this.state.clicks -= this.state.levels[0].price,
             valeurClick: this.state.valeurClick += this.state.levels[0].pc,
-            prixLevel: this.state.levels[0].price = Math.round(this.state.levels[1].price * this.state.inflation)
+            prixLevel: this.state.levels[0].price = Math.round(this.state.levels[0].price * this.state.inflation)
         })
     }
 
@@ -79,13 +79,13 @@ export class Cookie extends React.Component{
         ))
         return (
             <div className="display">
-                <div className="shop">SHOP
-                <div className="box">
+                <div className="shop shoptitle">SHOP
+                {/* <div className="box"> */}
 
-                <div>
+                <div className="box">
                     {listCookieLevel}
                 </div>
-                </div>
+                {/* </div> */}
             </div>
 
             <div className="totalCookies">
