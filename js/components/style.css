@@ -78,7 +78,8 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     width: 80%;
-    border: solid black 1px;
+    /* border: solid black 1px;
+    border-radius: 2%; */
     
     
 }
@@ -88,7 +89,7 @@ footer{
     /* background-color: rgba(137, 43, 226, 0.283); */
     text-align: center;
     width: 25%;
-    border:solid black 1px;
+    /* border:solid black 1px; */
     border-radius: 3%;
     margin: 20px;
     padding: 15px;
@@ -147,7 +148,7 @@ footer{
     backdrop-filter: blur(5px);
     text-align: center;
     width: 25%;
-    border:solid black 1px;
+    /* border:solid black 1px; */
     border-radius: 3%;
     margin: 10px;
     padding: 5px;

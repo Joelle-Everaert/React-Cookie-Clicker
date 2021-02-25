@@ -20,6 +20,11 @@ class Cookie extends React.Component{
         };
     }
 
+    clicked = () => {
+        this.setState({
+            clicks: this.state.clicks + this.state.valeurClick
+        })
+    }
     
      upgrade = id => {
         this.setState({
@@ -37,11 +42,6 @@ class Cookie extends React.Component{
         })  
     }
 
-    clicked = () => {
-        this.setState({
-            clicks: this.state.clicks + this.state.valeurClick
-        })
-    }
 
     // level1 = () => {
     //     this.setState({
@@ -93,21 +93,19 @@ class Cookie extends React.Component{
             <div className="container">
                 <div className="display">
                     <div className="shop shoptitle">SHOP
-                    {/* <div className="box"> */}
-
-                    <div className="box">
+                        <div className="box">
                         {listCookieLevel}
+                        </div>
                     </div>
-                    {/* </div> */}
-                </div>
 
                 <div className="totalCookies">
-                <button onClick={this.clicked} className="cookie"><strong>{this.state.valeurClick}</strong></button>
+                <button onClick={this.clicked} className="cookie"><strong>Click on me</strong></button>
+                <p>Value of click : {this.state.valeurClick}</p>
                 </div>
                 <div className="displayCookie"> <div className="number">Number of cookies </div> <div className="result"> {this.state.clicks}</div>
-                <Bonus 
-                clicker={this.state.clicks}
-                />
+                    <Bonus 
+                    clicker={this.state.clicks}
+                    />
                 </div>
 
                 </div>
