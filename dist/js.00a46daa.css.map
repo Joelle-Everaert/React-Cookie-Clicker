@@ -1,1 +1,0 @@
-{"version":3,"sources":["js/style.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA","file":"js.00a46daa.css","sourceRoot":"..","sourcesContent":[".navBar{\n    display: flex;\n    justify-content: space-between;\n    padding: 10px;\n    background-color: black;\n    color: white;\n}"]}
