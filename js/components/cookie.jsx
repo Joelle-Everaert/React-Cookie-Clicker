@@ -92,7 +92,7 @@ class Cookie extends React.Component{
         return (
             <div className="container">
                 <div className="display">
-                    <div className="shop shoptitle">SHOP
+                    <div className="shop">SHOP
                         <div className="box">
                         {listCookieLevel}
                         </div>
