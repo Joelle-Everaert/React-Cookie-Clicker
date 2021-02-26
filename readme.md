@@ -21,8 +21,13 @@ The more you buy a certain type of building, the more it becomes expensive.
 
 ## Languages used?
 
-* Reactjs
+* basics in React.js
+* knowledges in JavaScript
+* knowledges in HTML
+* knowledges in CSS
 
+## Final Result
+You can find the website [here](https://joelle-everaert.github.io/React-Cookie-Clicker/)
 
 
 
