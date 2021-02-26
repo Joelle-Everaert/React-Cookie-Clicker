@@ -1,4 +1,4 @@
-# React Cookie Clicker
+#  :cookie: React Cookie Clicker :cookie: 
 
 ## Project infos
 
@@ -28,6 +28,9 @@ The more you buy a certain type of building, the more it becomes expensive.
 
 ## Final Result
 You can find the website [here](https://joelle-everaert.github.io/React-Cookie-Clicker/)
+
+### Little overview :wink:
+![image preview](https://github.com/Joelle-Everaert/React-Cookie-Clicker/blob/master/js/components/img/overview.png?raw=true)
 
 
 
