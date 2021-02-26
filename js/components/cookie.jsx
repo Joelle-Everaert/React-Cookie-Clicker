@@ -14,7 +14,7 @@ class Cookie extends React.Component{
         {id: 2, name:"level3", price:500, func:this.upgradePerSec, class:"level level3", pc:20}
     ],
             valeurClick: 1,
-            clicks : 10000,
+            clicks : 0,
             pcPerSecond: 0,
             inflation : 1.15,
         };
@@ -103,7 +103,7 @@ class Cookie extends React.Component{
                
                 {/* A CUSTO */}
                 
-                <p>Value of click : {this.state.valeurClick}</p>
+                <div className="click">Click value: {this.state.valeurClick}</div>
                 </div>
                 <div className="displayCookie"> <div className="number">Number of cookies </div> <div className="result"> {this.state.clicks}</div>
                     <Bonus 

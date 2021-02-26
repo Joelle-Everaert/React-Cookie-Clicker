@@ -1,1 +1,1 @@
-# React Cookies Clicker
+# React Cookie Clicker

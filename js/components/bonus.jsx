@@ -5,7 +5,7 @@ class Bonus extends Component{
         return(
             
             <div className="bonus">
-                <div className="titleBonus">BONUS</div>
+                <div className="titleBonus">TROPHIES</div>
                 {this.props.clicker >= 2000 ?
                 <div className="bonusImg"> 2000 cookies</div>
                 :
