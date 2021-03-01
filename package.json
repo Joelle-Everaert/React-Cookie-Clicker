@@ -5,7 +5,8 @@
   "description": "First project with React",
   "main": "index.js",
   "scripts": {
-    "predeploy": "rm -rf dist && parcel build index.html",
+    "build": "parcel build index.html --public-url /React-Cookie-Clicker/",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel index.html"
