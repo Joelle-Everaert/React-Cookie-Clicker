@@ -13,7 +13,7 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"react":"HdMw","object-assign":"YOwE","scheduler":"IGIl"}],"X9zx":[function(require,module,exports) {
 "use strict";function _(){if("undefined"!=typeof __REACT_DEVTOOLS_GLOBAL_HOOK__&&"function"==typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE){0;try{__REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(_)}catch(O){console.error(O)}}}_(),module.exports=require("./cjs/react-dom.production.min.js");
 },{"./cjs/react-dom.production.min.js":"jF7N"}],"SAGh":[function(require,module,exports) {
-module.exports="logoTest.1eb0784e.jpg";
+module.exports="/React-Cookie-Clicker/logoTest.1eb0784e.jpg";
 },{}],"Duym":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.NavBar=l;var e=a(require("react")),t=a(require("./img/logoTest.jpg"));function a(e){return e&&e.__esModule?e:{default:e}}function l(){return e.default.createElement("nav",{className:"navBar"},e.default.createElement("div",null,"React Cookies Cliker"),e.default.createElement("a",{href:""}," ",e.default.createElement("img",{id:"logo",src:t.default,alt:"logo"})),e.default.createElement("div",null,"By ",e.default.createElement("a",{className:"link",href:"https://github.com/Joelle-Everaert",target:"_blank"},"/ Joelle Everaert \\ ")))}
 },{"react":"HdMw","./img/logoTest.jpg":"SAGh"}],"Tl2B":[function(require,module,exports) {
@@ -27,4 +27,4 @@ module.exports="logoTest.1eb0784e.jpg";
 },{"react":"HdMw"}],"QvaY":[function(require,module,exports) {
 "use strict";var e=u(require("react-dom")),t=u(require("react")),r=require("./components/navbar.jsx"),n=u(require("./components/cookie.jsx")),l=require("./components/footer.jsx");function u(e){return e&&e.__esModule?e:{default:e}}function a(){return t.default.createElement("div",null,t.default.createElement(r.NavBar,null),t.default.createElement(n.default,null),t.default.createElement(l.Footer,null))}e.default.render(t.default.createElement(a,null),document.getElementById("app"));
 },{"react-dom":"X9zx","react":"HdMw","./components/navbar.jsx":"Duym","./components/cookie.jsx":"CaPx","./components/footer.jsx":"QZZ4"}]},{},["QvaY"], null)
-//# sourceMappingURL=/js.99451628.js.map
+//# sourceMappingURL=/React-Cookie-Clicker/js.99451628.js.map
